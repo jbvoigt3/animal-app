@@ -1,0 +1,13 @@
+<h1>Edit Person</h1>
+<%= form_for @animsEdit do |f| %>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %><br>
+  <br>
+  <%= f.label :gender %><br>
+  <%= f.text_field :gender %><br>
+  <br>
+  <%= f.label :remarks %><br>
+  <%= f.text_area :remarks %><br>
+  <br>
+  <%= f.submit %>
+<% end %>

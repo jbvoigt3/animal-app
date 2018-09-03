@@ -1,5 +1,4 @@
 class AnimsController < ApplicationController
-  # anims#index, alias: anims
   def index
     @animsIndex = Anim.all
   end
@@ -24,7 +23,17 @@ class AnimsController < ApplicationController
 
 
   def edit
-    @animsEdit = Anim.find(param[:id])
+    @animsEdit = Anim.find(params[:id])
+  end
+
+  def update
+    @animsUpdate = Anim.find(params[:id])
+
+    if @animsUpdate.update(anims_params)
+      redirect_to anims_path
+    else
+      render :edit
+    end
   end
 
   # def destroy
