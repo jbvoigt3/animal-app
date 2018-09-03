@@ -1,0 +1,2 @@
+module AnimsHelper
+end
